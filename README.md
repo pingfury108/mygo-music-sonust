@@ -6,7 +6,7 @@
 
 ## 针对的 Sonust 与兼容接口
 
-本插件针对 **[pingfury108/sonust](https://github.com/pingfury108/sonust)** 编写，要求服务端为 **OpenSubsonic 1.16.1**，并开启 `apiKey` 认证。
+本插件针对 **[pingfury108/sonust](https://github.com/pingfury108/sonust)** 编写，要求服务端为 **OpenSubsonic 1.16.1**，并使用 `apiKey` 认证（`SONUST_API_KEY`，或 Sonust 首次启动时打印的 key）。
 
 实测环境：
 
