@@ -1,0 +1,51 @@
+{
+  "id": "sonust",
+  "name": "Sonust",
+  "version": "0.1.0",
+  "minAppVersion": "0.1.20",
+  "main": "index.js",
+  "playback": "stream",
+  "permissions": {
+    "network": [
+      "*"
+    ]
+  },
+  "settings": [
+    {
+      "key": "server",
+      "label": "Server",
+      "help": "Your Sonust address, such as http://192.168.1.10:4533"
+    },
+    {
+      "key": "apiKey",
+      "label": "API Key",
+      "help": "The value of SONUST_API_KEY, or the key Sonust printed the first time it started"
+    },
+    {
+      "key": "debug",
+      "label": "Debug logging",
+      "help": "Enter true to log API calls; run MyGo Music from a terminal to see them."
+    }
+  ],
+  "navigation": [
+    {
+      "builtin": "home"
+    },
+    {
+      "title": "Albums",
+      "page": "albums:0",
+      "icon": "album"
+    },
+    {
+      "title": "Artists",
+      "page": "artists",
+      "icon": "artist"
+    },
+    {
+      "builtin": "liked"
+    },
+    {
+      "builtin": "savedAlbums"
+    }
+  ]
+}
