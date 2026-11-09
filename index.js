@@ -145,7 +145,9 @@ async function apiOnce(method, params) {
     log("<-", method, `${Date.now() - started}ms`);
     return answer;
   } catch (e) {
-    if (e && e.code) {
+    // Our own errors carry a string code; DOMException's AbortError carries a
+    // numeric one, and must fall through to the timeout retry.
+    if (e && typeof e.code === "string") {
       log("x", method, `${Date.now() - started}ms`, e.message);
       throw e;
     }

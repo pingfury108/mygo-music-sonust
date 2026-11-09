@@ -10,7 +10,7 @@
 - 协议：OpenSubsonic 1.16.1
 - 认证：`apiKey`（`SONUST_API_KEY`，或 Sonust 首次启动打印的 key）
 - 请求：全部 GET，不需要 `SONUST_PASSWORD` / `t/s` / `p=`
-- 已在 Sonust 0.1.0、MyGo Music 0.1.20 上使用
+- 已在 Sonust 0.1.0（2026-11-09 更新，含 `getTopSongs`）与更早版本、MyGo Music 0.1.20 上使用
 
 | 功能 | Sonust 接口 |
 | --- | --- |
@@ -71,8 +71,8 @@ https://github.com/pingfury108/mygo-music-sonust
 ## 限制
 
 - `search3` 的歌曲只按标题匹配：搜歌手名时，歌手 Tab 有结果，歌曲 Tab 可能没有。
-- `getTopSongs` 在 Sonust 中为空：歌手页歌曲回退到最多 8 张专辑、最多 50 首，不是按播放量排序。
-- 封面只提取内嵌图片；没有内嵌封面的专辑/歌手可能显示占位图。
+- 新版 Sonust 的 `getTopSongs` 已可用；旧版为空时，歌手页歌曲回退到最多 8 张专辑、最多 50 首。
+- 封面：新版 Sonust 支持内嵌图 + `cover/folder/album/front.jpg/png` 目录图；旧版只提取内嵌图。
 - 只显示同步歌词（`synced: true`）。
 - 不支持 Opus；MyGo 0.1.20 只解 Ogg Vorbis。
 - “最近播放歌曲”是插件本地历史（最多 30 首），不是 Sonust 接口。
